@@ -26,7 +26,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/track-visit/{externalId}', [VisitsController::class, 'trackVisit']);
     
         // updates visit stage
-        Route::post('/update-stage', [VisitsController::class, 'updateStage']);
+        Route::patch('/update-stage', [VisitsController::class, 'updateStage']);
     });    
 });
 
