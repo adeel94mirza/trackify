@@ -10,11 +10,13 @@ A B2B solution to track and monitor traffic activity on your application. This a
 To run this project, you will need to update the following environment variables to your .env file
 
 `DB_DATABASE=[your_database_name]`
+`DB_USERNAME=[your_database_username]`
+`DB_PASSWORD=[your_database_password]`
 
 
 ## Installation
 
-After cloning the project run
+After cloning the project you should run the following commands
 
 ```bash
   composer install
@@ -26,30 +28,18 @@ After cloning the project run
     
 ## Deployment
 
-You should the following commands on each Deployment
+You should run the following commands on each Deployment
 
 ```bash
   composer install
   npm install
   npm run build
   php artisan migrate
-```
-Run this command to seed 1000 visits
-```bash
-  php artisan db:seed --class=VisitsTableSeeder
 ```
 
 ## Additional Commands
 
-You should the following commands on each Deployment
-
-```bash
-  composer install
-  npm install
-  npm run build
-  php artisan migrate
-```
-Run this command to seed 1000 visits
+Run this command if you wish to seed 1000 visits
 ```bash
   php artisan db:seed --class=VisitsTableSeeder
 ```
@@ -69,7 +59,7 @@ Logs a visit for the unique external ID
 | `externalId` | `string` | `URI` | **Required**. external id to log |
 
 #### Update Stage
-Logs a visit for the unique external ID
+Updates the stage of interaction for the given external ID
 
 ```http
   PATCH /api/v1/update-stage
