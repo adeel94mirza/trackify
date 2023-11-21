@@ -3,13 +3,17 @@
         Visitors By Stage
     </h1>
 
-    <ul>
-        @foreach ($stageVisitors as $stage => $count)
-            @if ($stage == null)
-                <li>Null: {{ $count }}</li>
-            @else
-                <li>{{ $stage }}: {{ $count }}</li>
-            @endif
-        @endforeach
-    </ul>
+    @if (empty($stageVisitors))
+        <p>No Data Available</p>
+    @else
+        <ul>
+            @foreach ($stageVisitors as $stage => $count)
+                @if ($stage == null)
+                    <li>Null: {{ $count }}</li>
+                @else
+                    <li>{{ $stage }}: {{ $count }}</li>
+                @endif
+            @endforeach
+        </ul>
+    @endif
 </div>
