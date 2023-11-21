@@ -65,8 +65,8 @@ Logs a visit for the unique external ID
 
 | Parameter     | Type        | Location        | Description           |
 | :--------     | :-----------  | :------  | :------------------------- |
-| `bearer token` | `string` | `header` | **Required**. Your API key |
-| `externalId` | `string` | `URI` | **Required**. Your API key |
+| `bearer token` | `string` | `header` | **Required**. Api token generated from the app |
+| `externalId` | `string` | `URI` | **Required**. external id to log |
 
 #### Update Stage
 Logs a visit for the unique external ID
@@ -77,9 +77,9 @@ Logs a visit for the unique external ID
 
 | Parameter     | Type           | Location        | Description                |
 | :--------     | :----------  | :---------------  | :------------------------- |
-| `bearer token` | `string` | `header` | **Required**. Your API key |
-| `externalId`      | `string` | `body` | **Required**. Id of item to fetch |
-| `stage`      | `string` | `body` | **Required**. Id of item to fetch |
+| `bearer token` | `string` | `header` | **Required**. Api token generated from the app |
+| `externalId`      | `string` | `body` | **Required**. external id to update |
+| `stage`      | `string` | `body` | **Required**. See valid stages |
 
 | Valid Stages |
 | :-------- |
