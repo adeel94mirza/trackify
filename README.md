@@ -24,6 +24,7 @@ After cloning the project you should run the following commands
   php artisan key:generate
   npm run build
   php artisan migrate
+  php artisan serve
 ```
     
 ## Deployment
@@ -31,10 +32,13 @@ After cloning the project you should run the following commands
 You should run the following commands on each Deployment
 
 ```bash
+  php artisan down
   composer install
   npm install
   npm run build
   php artisan migrate
+  php artisan optimize:clear
+  php artisan up
 ```
 
 ## Additional Commands
